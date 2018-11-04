@@ -3,6 +3,7 @@ import React from "react";
 import BuildControl from "./BuildControl/BuildControl";
 
 import StyledBuildControls from "../../../styled-components/Burger/BuildControls/StyledBuildControls";
+import OrderButton from "../../../styled-components/UiStyledComponents/Button/OrderButton";
 
 const controls = [
   { label: "Salad", type: "salad" },
@@ -25,6 +26,7 @@ const BuildControls = props => (
         disabled={props.disabled[ctrl.type]}
       />
     ))}
+    <OrderButton disabled={!props.purchasable}>ORDER NOW</OrderButton>
   </StyledBuildControls>
 );
 
