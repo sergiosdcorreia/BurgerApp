@@ -2,6 +2,8 @@ import React from "react";
 
 import BuildControl from "./BuildControl/BuildControl";
 
+import StyledBuildControls from "../../../styled-components/Burger/BuildControls/StyledBuildControls";
+
 const controls = [
   { label: "Salad", type: "salad" },
   { label: "Bacon", type: "bacon" },
@@ -10,7 +12,10 @@ const controls = [
 ];
 
 const BuildControls = props => (
-  <div>
+  <StyledBuildControls>
+    <p>
+      Current Price: <strong>£{props.price.toFixed(2)}</strong>
+    </p>
     {controls.map(ctrl => (
       <BuildControl
         key={ctrl.label}
@@ -20,7 +25,7 @@ const BuildControls = props => (
         disabled={props.disabled[ctrl.type]}
       />
     ))}
-  </div>
+  </StyledBuildControls>
 );
 
 export default BuildControls;
