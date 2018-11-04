@@ -34,7 +34,7 @@ class BurgerIngredient extends Component {
       case "cheese":
         ingredient = <Cheese />;
         break;
-      case "Salad":
+      case "salad":
         ingredient = <Salad />;
         break;
       case "bacon":
