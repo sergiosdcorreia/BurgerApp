@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledBurger = styled.div`
+const StyledBurger = styled.div`
   width: 100%;
   margin: auto;
   height: 250px;
@@ -19,8 +19,10 @@ export const StyledBurger = styled.div`
     height: 400px;
   }
 
-  @media (min-width: 500px) and (max-height: 400px) {
+  @media (min-width: 500px) and (min-height: 400px) {
     width: 350px;
     height: 300px;
   }
 `;
+
+export default StyledBurger;
