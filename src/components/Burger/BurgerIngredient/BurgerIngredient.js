@@ -1,7 +1,15 @@
 import React from "react";
 
-import BreadBottom from "../../../styled-components/Burger/Ingredient/BreadBottom";
-import BreadTop from "../../../styled-components/Burger/Ingredient/BreadTop";
+import {
+  BreadBottom,
+  BreadTop,
+  Seeds1,
+  Seeds2,
+  Meat,
+  Cheese,
+  Salad,
+  Bacon
+} from "../../../styled-components/Burger/Ingredient/Ingredients";
 
 const BurgerIngredient = props => {
   let ingredient = null;
@@ -11,8 +19,30 @@ const BurgerIngredient = props => {
       ingredient = <BreadBottom />;
       break;
     case "bread-top":
-      ingredient = <BreadTop />;
+      ingredient = (
+        <BreadTop>
+          <Seeds1 />
+          <Seeds2 />
+        </BreadTop>
+      );
+      break;
+    case "meat":
+      ingredient = <Meat />;
+      break;
+    case "cheese":
+      ingredient = <Cheese />;
+      break;
+    case "Salad":
+      ingredient = <Salad />;
+      break;
+    case "bacon":
+      ingredient = <Bacon />;
+      break;
+    default:
+      ingredient = null;
   }
+
+  return ingredient;
 };
 
 export default BurgerIngredient;
