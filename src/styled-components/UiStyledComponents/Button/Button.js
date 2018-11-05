@@ -55,6 +55,44 @@ const Button = styled.button`
         color: white;
       }
     `};
+  ${props =>
+    props.danger &&
+    css`
+      color: #944317;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font: inherit;
+      padding: 10px;
+      margin: 10px;
+      font-weight: bold;
+      display: inline-block;
+
+      &:first-of-type {
+        margin-left: 0;
+        pading-left: 0;
+      }
+    `};
+  ${props =>
+    props.success &&
+    css`
+      color: #5c9210;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font: inherit;
+      padding: 10px;
+      margin: 10px;
+      font-weight: bold;
+      display: inline-block;
+
+      &:first-of-type {
+        margin-left: 0;
+        pading-left: 0;
+      }
+    `};
 `;
 
 export default Button;
