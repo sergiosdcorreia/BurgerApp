@@ -4,11 +4,15 @@ import NavigationStyled from "../../../styled-components/Navigation/NavigationSt
 import ToolbarStyled from "../../../styled-components/Navigation/Toolbar/ToolbarStyled";
 import Logo from "../../Logo/Logo";
 
+import NavigationItems from "../../Navigation/NavigationItems/NavigationItems";
+
 const Toolbar = props => (
   <ToolbarStyled>
     <div>MENU</div>
     <Logo />
-    <NavigationStyled>...</NavigationStyled>
+    <NavigationStyled>
+      <NavigationItems />
+    </NavigationStyled>
   </ToolbarStyled>
 );
 
