@@ -12,6 +12,11 @@ const ModalStyled = styled.div`
   top: 30%;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
+  transform: translateY(-100vh);
+  opacity: 0;
+
+  ${({ show }) => show && `transform: translateY(0); opacity: 1`}
+  }
 
   @media (min-width: 600px) {
     width: 500px;
