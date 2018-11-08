@@ -9,7 +9,7 @@ import NavigationItems from "../../Navigation/NavigationItems/NavigationItems";
 const Toolbar = props => (
   <ToolbarStyled>
     <div>MENU</div>
-    <Logo />
+    <Logo height="80%" />
     <NavigationStyled>
       <NavigationItems />
     </NavigationStyled>
