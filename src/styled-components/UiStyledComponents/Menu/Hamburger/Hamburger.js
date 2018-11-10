@@ -12,12 +12,12 @@ const Hamburger = styled.div`
     display: block;
     content: "";
     position: absolute;
-    height: 7px;
+    height: 3px;
     width: 22px;
     border-top: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
     left: 20px;
-    top: 16px;
+    top: 6px;
   }
 
   &:before {
@@ -28,7 +28,7 @@ const Hamburger = styled.div`
     width: 22px;
     border-top: 2px solid #ffffff;
     left: 20px;
-    top: 26px;
+    top: 16px;
   }
 `;
 
