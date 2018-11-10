@@ -12,21 +12,11 @@ const SideDrawerStyled = styled.div`
   padding: 32px 16px;
   box-sizing: border-box;
   transition: transform 0.3s ease-out;
+  transform: ${props => (props.open ? "translateX(0)" : "translateX(-100%)")};
 
   @media (min-width: 500px) {
     display: none;
   }
-
-  ${props =>
-    props.open &&
-    css`
-      transform: translateX(0);
-    `};
-  ${props =>
-    props.close &&
-    css`
-      transform: translateX(-100%);
-    `};
 `;
 
 export default SideDrawerStyled;
