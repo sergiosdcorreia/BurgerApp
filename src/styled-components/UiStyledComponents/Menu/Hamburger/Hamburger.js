@@ -30,6 +30,10 @@ const Hamburger = styled.div`
     left: 20px;
     top: 16px;
   }
+
+  @media only screen and (min-width: 500px) {
+    display: none;
+  }
 `;
 
 export default Hamburger;
