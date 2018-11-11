@@ -1,10 +1,17 @@
 import React from "react";
 
 import NavigationItemStyled from "../../../../styled-components/Navigation/NavigationItems/NavigationItem/NavigtionItemStyled";
+import NavLinkStyled from "../../../../styled-components/Navigation/NavLinkStyled";
 
 const NavigationItem = props => (
   <NavigationItemStyled active={props.active}>
-    <a href={props.link}>{props.children}</a>
+    <NavLinkStyled
+      to={props.link}
+      exact={props.exact}
+      activeClassName={props.active}
+    >
+      {props.children}
+    </NavLinkStyled>
   </NavigationItemStyled>
 );
 
