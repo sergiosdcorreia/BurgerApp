@@ -95,29 +95,30 @@ class BurgerBuilder extends Component {
 
   purchaseContinueHandler = () => {
     //   alert("YOU CONTINUE!");
-    this.setState({ loading: true });
-    const order = {
-      ingredients: this.state.ingredients,
-      price: this.state.totalPrice,
-      customer: {
-        name: "Sergio",
-        address: {
-          street: "50 Old Tiverton Road",
-          zipCode: "EX46NG",
-          country: "United Kingdom"
-        },
-        email: "sergiosdcorreia@gmail.com"
-      },
-      deliveryMethod: "fastest"
-    };
-    axios
-      .post("/orders.json", order)
-      .then(response => {
-        this.setState({ loading: false, purchasing: false });
-      })
-      .catch(error => {
-        this.setState({ loading: false, purchasing: false });
-      });
+    // this.setState({ loading: true });
+    // const order = {
+    //   ingredients: this.state.ingredients,
+    //   price: this.state.totalPrice,
+    //   customer: {
+    //     name: "Sergio",
+    //     address: {
+    //       street: "50 Old Tiverton Road",
+    //       zipCode: "EX46NG",
+    //       country: "United Kingdom"
+    //     },
+    //     email: "sergiosdcorreia@gmail.com"
+    //   },
+    //   deliveryMethod: "fastest"
+    // };
+    // axios
+    //   .post("/orders.json", order)
+    //   .then(response => {
+    //     this.setState({ loading: false, purchasing: false });
+    //   })
+    //   .catch(error => {
+    //     this.setState({ loading: false, purchasing: false });
+    //   });
+    this.props.history.push("/checkout");
   };
 
   render() {
@@ -128,7 +129,7 @@ class BurgerBuilder extends Component {
       disabledInfo[key] = disabledInfo[key] <= 0;
     }
     let burger = this.state.error ? (
-      <p>Ingredients can't e loaded!</p>
+      <p>Ingredients can't be loaded!</p>
     ) : (
       <Spinner />
     );
