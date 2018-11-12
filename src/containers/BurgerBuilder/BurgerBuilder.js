@@ -104,7 +104,7 @@ class BurgerBuilder extends Component {
           encodeURIComponent(this.state.ingredients[i])
       );
     }
-    queryParams.push("Price" + this.state.totalPrice);
+    queryParams.push("price" + this.state.totalPrice);
     const queryString = queryParams.join("&");
     this.props.history.push({
       pathname: "/checkout",
@@ -149,7 +149,7 @@ class BurgerBuilder extends Component {
       );
     }
     if (this.state.loading) {
-      orderSummary = <Spinner>Loading...</Spinner>;
+      orderSummary = <Spinner />;
     }
     return (
       <Aux>

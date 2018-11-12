@@ -20,7 +20,7 @@ class ContactData extends Component {
     event.preventDefault();
     this.setState({ loading: true });
     const order = {
-      ingredients: this.props.ingredients,
+      //ingredients: this.props.ingredients,
       price: this.props.price,
       customer: {
         name: "Sergio",
@@ -33,6 +33,7 @@ class ContactData extends Component {
       },
       deliveryMethod: "fastest"
     };
+    console.log(order);
     axios
       .post("/orders.json", order)
       .then(response => {
@@ -45,15 +46,17 @@ class ContactData extends Component {
   };
   render() {
     let form = (
-      <form>
-        <input type="text" name="name" placeholder="Your Name" />
-        <input type="email" name="email" placeholder="Your Email" />
-        <input type="text" name="street" placeholder="Street" />
-        <input type="text" name="postal" placeholder="Postal Code" />
-        <Button success onClick={this.orderHandler}>
-          ORDER
-        </Button>
-      </form>
+      <div>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" />
+          <input type="text" name="street" placeholder="Street" />
+          <input type="text" name="postal" placeholder="Postal Code" />
+          <Button success onClick={this.orderHandler}>
+            ORDER
+          </Button>
+        </form>
+      </div>
     );
     if (this.state.loading) {
       form = <Spinner />;
